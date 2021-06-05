@@ -2,6 +2,8 @@
 layout: default
 ---
 
+Hi! I'm a Ph.D. student, studying Computer Science at UC Irvine, supervised by [Pierre Baldi](https://www.igb.uci.edu/~pfbaldi/). My research is focused around (1) Fundamental Deep Learning including Physically Plausible Deep Learning, and Adversarial Robusntess, (2) Deep Learning for Chemistry, mainly the prediction of chemical reactions.
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
