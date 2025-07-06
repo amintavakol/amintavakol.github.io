@@ -150,7 +150,23 @@
     </div>
 
     <div class="project">
-      <img src="projects/hydrogel/hydrogel.png" alt="hydrogel" />
+      <img src="projects/protein-dyn/protein_dynamics.jpg" alt="Protein Dynamics" />
+      <div class="project-text">
+        <div class="project-title">Capturing Protein Dynamics: Encoding Temporal and Spatial Dynamics from Molecular Dynamic Simulations</div>
+        <p class="project-description justify">
+          Machine learning models for protein engineering typically use sequence-based, structure-based, or combined 
+          representations rooted in the idea that sequence and structure inform function. While effective in 
+          capturing evolutionary patterns, these approaches often overlook protein dynamics. We introduce a 
+          dynamic-aware representation derived from unsupervised analysis of molecular dynamics simulations. 
+          By encoding temporal and spatial behaviors, our method captures key interactions within the protein 
+          chain, offering valuable insights for protein design.
+        </p>
+      </div>
+    </div>
+
+    <div id="more-projects" style="display: none;">
+    <div class="project">
+      <img src="projects/hydrogel/hydrogel.jpg" alt="hydrogel" />
       <div class="project-text">
         <div class="project-title">Unraveling the Properties of Super Hydrogels via Intelligent Reaction Predictions</div>
         <p class="project-description justify">
@@ -165,6 +181,23 @@
       </div>
     </div>
 
+    <div class="project">
+      <img src="projects/toubillon/tourbillon.jpg" alt="Toubillon" />
+      <div class="project-text">
+        <div class="project-title">Circular Learning Provides Biological Plausibility</div>
+        <p class="project-description justify">
+          Training deep neural networks in biological systems is faced with major challenges such as scarce 
+          labeled data and obstacles for propagating error signals in the absence of symmetric connections. 
+          We introduce Tourbillon, a new architecture that uses circular autoencoders trained with various 
+          recirculation algorithms in a self-supervised mode, with an optional top layer for classification 
+          or regression. Tourbillon is designed to address biological learning constraints rather than enhance 
+          existing engineering applications. Preliminary experiments on small benchmark datasets show that 
+          Tourbillon performs comparably to models trained with backpropagation and may outperform other 
+          biologically plausible approaches. The code and models are available at https://github.com/IanRDomingo/Circular-Learning.
+        </p>
+      </div>
+    </div>
+    </div>
 
     <button onclick="toggleProjects()">See more</button>
 
