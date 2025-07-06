@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Amin Tavakoli – Postdoctoral Fellow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+<body>
+
+<div class="page-wrapper">
+  <div class="card">
+    
+    <!-- Top Section -->
+    <div class="top-section">
+      <img src="avatar.png" alt="Amin Tavakoli" class="profile-pic" />
+      <div>
+        <h1>Amin Tavakoli</h1>
+        <p><strong>Postdoctoral Fellow</strong><br />
+          Department of Computing and Mathematical Sciences<br />
+          California Institute of Technology <img src="caltech.png" alt="Caltech logo" class="inline-logo" /><br />
+          Email: amint@caltech.edu<br />
+          <a href="#publications">[Publications]</a> |
+          <a href="#research">[Research]</a> |
+          <a href="#teaching">[Teaching]</a> |
+          <a href="#contact">[Contact]</a>
+        </p>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- About -->
+    <h2>About Me</h2>
+    <p class="blue-bar justify">
+      I am a postdoctoral scientist at Caltech, working with Anima Anandkumar and Frances Arnold in the AI for Science Lab. 
+      My research focuses on developing new machine learning methodologies for scientific discovery, with applications in 
+      protein design, chemistry, and quantum physics. I earned my PhD in Computer Science from the University of California, 
+      Irvine, where I worked with Pierre Baldi in the AI in Science Institute. During my PhD, I conducted research on developing 
+      AI methodologies for molecular design, reaction prediction, and computational modeling of chemical processes, as well as 
+      advancing the theoretical foundations of deep learning.
+    </p>
+
+    <h2>Education</h2>
+    <p class="justify">
+      <li>Ph.D. Computer Science, University of California, Irvine, 2023 <img src="uci.png" alt="UCI logo" class="inline-logo" /></li>
+      <li>B.Sc. Physics, Sharif University of Technology, 2016 <img src="sharif.png" alt="Sharif logo" class="inline-logo" /></li>
+      <li>B.Sc. Engineering, Sharif University of Technology, 2016 <img src="sharif.png" alt="Sharif logo" class="inline-logo" /></li>
+    </p>
+
+    <!-- Research -->
+    <h2 id="research">Research Interests</h2>
+    <p class="justify"></p>
+      <li>Computational Protein Design</li>
+      <li>Machine Learning for Quantum Chemistry</li>
+      <li>Reinforcement Learning & Generative Models</li>
+    </p>
+
+    <!-- Publications -->
+    <h2 id="publications">Publications</h2>
+    <p>You can find my publications here: <a href="https://scholar.google.com/citations?user=27JuT8kAAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a></p>
+      
+
+    <!-- Projects -->
+    <h2 id="projects">Recent Projects</h2>
+
+    <div class="project">
+      <img src="project1.jpg" alt="Project 1" />
+      <div class="project-text">
+        <div class="project-title">Generative Enzyme Design</div>
+        <p class="project-description">
+          Developed a deep generative model for catalytic proteins...
+        </p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="project2.jpg" alt="Project 2" />
+      <div class="project-text">
+        <div class="project-title">Protein Structure Prediction with ESMFold</div>
+        <p class="project-description">
+          Created a lightweight prediction pipeline...
+        </p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="hydrogel.png" alt="Project 3" />
+      <div class="project-text">
+        <div class="project-title">Unraveling the Properties of Super Hydrogels via Intelligent Reaction Predictions</div>
+        <p class="project-description justify">
+          We synthesize a novel hydrogel with exceptional stretchability, capable of extending up to 260 times its original length. Its synthesis is guided by systematic optimization of key components: ammonium persulfate (APS), methylenebisacrylamide, dimethylacrylamide, and polyethylene oxide (PEO).
+          We hypothesize that this extreme stretchability arises from a unique architecture—termed Span Networks—in which the primary dimethylacrylamide-based polymer network is cross-linked by methylenebisacrylamide and connected by linear PEO chains capable of undergoing random chain scission.
+          Given the intractability of exhaustively analyzing all possible reaction pathways, we employ an AI-based reaction prediction system to investigate the underlying chemistry. This approach reveals a novel network formation mechanism involving PEO chains that link polymer networks through scission-prone interactions. These predicted mechanisms, including chain scission events between PEO and carboxyl groups, are experimentally validated using Fourier-transform infrared (FTIR) spectroscopy.
+        </p>
+      </div>
+    </div>
+
+    <div id="more-projects" style="display: none;">
+      <div class="project">
+        <img src="project4.jpg" alt="Project 4" />
+        <div class="project-text">
+          <div class="project-title">Radical Reaction Predictor</div>
+          <p class="project-description">
+            Built a predictor for hydrogel radical reactions...
+          </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="project5.jpg" alt="Project 5" />
+        <div class="project-text">
+          <div class="project-title">RL for Molecular Design</div>
+          <p class="project-description">
+            At Google, I built a DQN agent for molecular optimization...
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <button onclick="toggleProjects()">See more</button>
+
+    <!-- Teaching -->
+    <h2 id="teaching">Teaching & Mentoring</h2>
+    <ul>
+      <li>Instructor, Graduate Course on RL, Caltech (2025)</li>
+      <li>Mentored 4 grad students on protein design with generative models</li>
+    </ul>
+
+    <!-- Writings -->
+    <h2 id="writings">Writings</h2>
+    <ul>
+      <li><a href="writing-why-science-needs-style.html">Why Science Needs Style</a></li>
+      <li><a href="writing-learning-in-public.html">Learning in Public: A Researcher's Diary</a></li>
+      <li><a href="writing-generative-models.html">The Power and Limits of Generative Models</a></li>
+    </ul>
+
+    <!-- Contact -->
+    <h2 id="contact">Contact</h2>
+    <p class="contact-icons">
+      <a href="mailto:amint@caltech.edu" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/amintavakoli" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/yourhandle" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://scholar.google.com/citations?user=XXXX" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </p>
+
+
+    <hr />
+    <p style="text-align:center;">Last updated: July 2025</p>
+  </div>
+</div>
+
+<script>
+  let expanded = false;
+  function toggleProjects() {
+    const more = document.getElementById("more-projects");
+    const button = event.target;
+    if (expanded) {
+      more.style.display = "none";
+      button.innerText = "See more";
+    } else {
+      more.style.display = "block";
+      button.innerText = "See less";
+    }
+    expanded = !expanded;
+  }
+</script>
+
+</body>
+</html>
