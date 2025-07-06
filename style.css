@@ -63,7 +63,7 @@ button {
 }
 
 .card h2 {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .blue-bar {
@@ -128,7 +128,7 @@ button {
 }
 
 .inline-logo {
-  height: 1.0em;
+  height: 0.9em;
   vertical-align: middle;
-  margin-right: 6px;
+  margin-left: 6px;
 }
