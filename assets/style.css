@@ -132,3 +132,23 @@ button {
   vertical-align: middle;
   margin-left: 6px;
 }
+
+.pdf-button {
+  display: inline-block;
+  background-color: #2980b9;
+  color: white;
+  padding: 6px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-top: 8px;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+  text-align: center;
+}
+
+.pdf-button:hover {
+  background-color: #1a5276;
+  text-decoration: none;
+}
