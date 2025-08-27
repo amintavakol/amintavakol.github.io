@@ -195,6 +195,17 @@ button {
   font-size: 0.9rem;
 }
 
+/* Inline variant for contact lists */
+.contact-info.contact-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+}
+
+.contact-info.contact-inline .contact-item {
+  margin-bottom: 0;
+}
+
 .top-section > div:last-child {
   margin-top: 0;
   padding-top: 0;
