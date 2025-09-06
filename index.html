@@ -43,7 +43,7 @@
     </script>
   
     <!-- Fonts and Styles -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="assets/style.css" />
   
@@ -54,21 +54,24 @@
 <body>
 
 <div class="page-wrapper">
-  <div class="card">
+  <div class="card2">
     
     <!-- Top Section -->
     <div class="top-section">
       <div class="avatar-section">
         <img src="assets/avatar.png" alt="Amin Tavakoli" class="profile-pic" />
-        <p class="title-under-avatar"><strong>Postdoctoral Fellow</strong></p>
       </div>
       <div>
         <h1>Amin Tavakoli</h1>
         
         <div class="contact-info">
-          <div class="contact-item">
+          <!--<div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
             <span>Pasadena, CA</span>
+          </div>-->
+          <div class="contact-item">
+            <i class="fas fa-briefcase"></i>
+            <span>Postdoctoral Fellow</span>
           </div>
           <div class="contact-item">
             <i class="fas fa-university"></i>
@@ -101,14 +104,14 @@
     <hr />
 
     <!-- Quote of the Month -->
-    <div style="text-align: center; font-style: italic; margin: 2em 0;">
+    <div style="text-align: center; font-style: italic; margin: 2em 0; font-weight: 400;">
       <strong>Quote of the Month:</strong> "Intellectual growth should commence at birth and cease only at death." </br> — Albert Einstein
     </div>
 
 
     <!-- About -->
     <h2>About Me</h2>
-    <p class="blue-bar justify">
+    <p class="float-right">
       I am a postdoctoral scientist at Caltech, working with Anima Anandkumar and Frances Arnold in the AI for Science Lab. 
       My research focuses on developing new machine learning methodologies for scientific discovery, with applications in 
       protein design, chemistry, and quantum physics. I earned my PhD in Computer Science from the University of California, 
@@ -125,7 +128,7 @@
 
     <!-- Research -->
     <h2 id="research">Research Interests</h2>
-    <h5 style="font-style: italic; color: #2980b9;">Ordered by the extent of my current involvement.</h5>
+    <h5 style="color: #2980b9;">Ordered by the extent of my current involvement.</h5>
     <p class="justify"></p>
       <li>Computational Protein Design - Protein Language Models</li>
       <li>Generative Modeling of Molecular Systems: From Small Molecules to Proteins</li>
@@ -147,7 +150,7 @@
       <img src="projects/orbitall/orbitall.png" alt="orbitall" />
       <div class="project-text">
         <div class="project-title">A Unified Quantum Mechanical Representation Deep Learning Framework for All Molecular Systems</div>
-        <p class="project-description justify">
+        <p class="project-description float-right">
           While deep learning has advanced quantum chemistry, most models remain limited to neutral, closed-shell molecules. 
           In contrast, real-world systems involve varying charges, spins, and environments. We present our model—a geometry- 
           and physics-informed deep learning framework that incorporates spin-polarized orbital features and SE(3)-equivariant 
@@ -163,7 +166,7 @@
       <img src="projects/deeprxn/deeprxn.png" alt="deeprxn" />
       <div class="project-text">
         <div class="project-title">DeepRXN: A Platform of Deep Learning for Chemical Reactions</div>
-        <p class="project-description justify">
+        <p class="project-description float-right">
           DeepRXN is a specialized platform designed to advance the integration of deep learning into chemoinformatics, 
           hosting predictive chemoinformatics software and public chemical reaction databases. Its unique focus on 
           representing chemical reactions through elementary step reactions offers numerous advantages, with applications 
@@ -179,7 +182,7 @@
       <img src="projects/protein-dyn/protein_dynamics.jpg" alt="Protein Dynamics" />
       <div class="project-text">
         <div class="project-title">Capturing Protein Dynamics: Encoding Temporal and Spatial Dynamics from Molecular Dynamic Simulations</div>
-        <p class="project-description justify">
+        <p class="project-description float-right">
           Machine learning models for protein engineering typically use sequence-based, structure-based, or combined 
           representations rooted in the idea that sequence and structure inform function. While effective in 
           capturing evolutionary patterns, these approaches often overlook protein dynamics. We introduce a 
@@ -196,7 +199,7 @@
       <img src="projects/hydrogel/hydrogel.jpg" alt="hydrogel" />
       <div class="project-text">
         <div class="project-title">Unraveling the Properties of Super Hydrogels via Intelligent Reaction Predictions</div>
-        <p class="project-description justify">
+        <p class="project-description float-right">
           We developed an AI-based reaction prediction system to uncover the mechanism behind a novel hydrogel with extraordinary 
           stretchability—capable of extending up to 260 times its original length. The AI reveals a previously unknown network 
           formation process in which polyethylene oxide (PEO) chains create scission-prone links between dimethylacrylamide-based 
@@ -213,7 +216,7 @@
       <img src="projects/toubillon/tourbillon.jpg" alt="Toubillon" />
       <div class="project-text">
         <div class="project-title">Circular Learning Provides Biological Plausibility</div>
-        <p class="project-description justify">
+        <p class="project-description float-right">
           Training deep neural networks in biological systems is faced with major challenges such as scarce 
           labeled data and obstacles for propagating error signals in the absence of symmetric connections. 
           We introduce Tourbillon, a new architecture that uses circular autoencoders trained with various 
@@ -238,7 +241,7 @@
 
     <h5>Mentees:</h5>
     <div class="indented-list">
-      <li> Raswanth Muguran - Caltech 2025</li>
+      <li> Raswanth Murugan - Caltech 2025</li>
       <li> Beom Seok Kang - Caltech 2024</li>
       <li> Ian Domingo - UCI 2023</li>
       <li> Ryan Miller - UCI 2023</li>

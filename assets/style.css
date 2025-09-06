@@ -22,6 +22,15 @@ body {
   border-radius: 10px;
 }
 
+.card2 {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+
 h1, h2 {
   color: #2c3e50;
   font-weight: 600;
@@ -64,8 +73,8 @@ a:hover {
 }
 
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 190px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -86,7 +95,7 @@ button {
 }
 
 .card h2 {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .blue-bar {
@@ -146,7 +155,8 @@ button {
 }
 
 .project-description {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 350;
   color: #555;
   line-height: 1.4;
   margin: 0;
@@ -250,4 +260,102 @@ h2 {
 .pdf-button:hover {
   background-color: #1a5276;
   text-decoration: none;
+}
+
+.project {
+  background: #fff;                 /* card background */
+  border: 1px solid #ddd;           /* light border */
+  border-radius: 12px;              /* rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08); /* soft shadow */
+  margin: 1.5rem 0;                 /* space between cards */
+  padding: 1rem;                    /* inner spacing */
+  display: flex;                    /* keep image + text side by side */
+  gap: 1rem;                        /* space between image and text */
+  align-items: flex-start;
+}
+
+.project img {
+  width: 250px;       /* larger thumbnails (adjust to taste) */
+  max-width: 40%;     /* never take more than 40% of the card width */
+  height: auto;       /* keeps proportions */
+  border-radius: 8px; /* rounded corners */
+  object-fit: cover;  /* crops nicely if too tall */
+}
+
+.project-text {
+  flex: 1;                          /* text takes remaining space */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300; /* lighter, thinner look */
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; /* not too bold */
+}
+
+/* ---- Professional buttons (override) ---- */
+button,
+.pdf-button {
+  display: inline-block;            /* makes <a> behave like a button */
+  background: #2980b9;              /* primary blue */
+  color: #fff;
+  padding: 0.6rem 1.1rem;
+  border: 0;
+  border-radius: 8px;               /* smoother corners */
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1;                   /* tighter vertical rhythm */
+  cursor: pointer;
+  text-decoration: none;            /* ensure <a> has no underline */
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* Hover: subtle lift + darker tone */
+button:hover,
+.pdf-button:hover {
+  background: #1a5276;              /* darker shade */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  text-decoration: none;            /* keep links clean */
+}
+
+/* Active: pressed */
+button:active,
+.pdf-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* Keyboard focus: accessible outline */
+button:focus-visible,
+.pdf-button:focus-visible {
+  outline: 3px solid rgba(41,128,185,0.35);
+  outline-offset: 2px;
+}
+
+/* Disabled state (optional) */
+button:disabled,
+.pdf-button[aria-disabled="true"] {
+  background: #9bbbd0;
+  color: #f2f6f9;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* If you want a lighter, secondary style: add class="btn--outline" */
+.btn--outline {
+  background: transparent;
+  color: #2980b9;
+  border: 2px solid #2980b9;
+  box-shadow: none;
+}
+.btn--outline:hover {
+  background: #2980b9;
+  color: #fff;
 }
