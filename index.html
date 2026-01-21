@@ -189,7 +189,6 @@
       </div>
     </div>
 
-
     <div class="project">
       <img src="projects/deeprxn/deeprxn.png" alt="deeprxn" />
       <div class="project-text">
@@ -222,7 +221,6 @@
       </div>
     </div>
 
-    <div id="more-projects" style="display: none;">
     <div class="project">
       <img src="projects/hydrogel/hydrogel.jpg" alt="hydrogel" />
       <div class="project-text">
@@ -231,10 +229,10 @@
           We developed an AI-based reaction prediction system to uncover the mechanism behind a novel hydrogel with extraordinary 
           stretchability—capable of extending up to 260 times its original length. The AI reveals a previously unknown network 
           formation process in which polyethylene oxide (PEO) chains create scission-prone links between dimethylacrylamide-based 
-          polymer networks cross-linked by methylenebisacrylamide. These insights guide the hydrogel’s synthesis through targeted 
+          polymer networks cross-linked by methylenebisacrylamide. These insights guide the hydrogel's synthesis through targeted 
           optimization of key components: APS, methylenebisacrylamide, dimethylacrylamide, and PEO. Experimental validation via FTIR 
           spectroscopy confirms AI-predicted mechanisms, including PEO-carboxyl chain scission. We term the resulting structure a 
-          Span Network—an architecture central to the material’s extreme elasticity.
+          Span Network—an architecture central to the material's extreme elasticity.
         </p>
         <a href="https://arxiv.org/abs/2403.05129" class="pdf-button">PDF</a>
       </div>
@@ -257,9 +255,6 @@
         <a href="https://openreview.net/pdf?id=XmNJDcannt" class="pdf-button">PDF</a>
       </div>
     </div>
-    </div>
-
-    <button onclick="toggleProjects()">See more</button>
 
     <!-- Teaching -->
     <h2 id="teaching">Teaching & Mentoring</h2>
@@ -312,19 +307,55 @@
 </div>
 
 <script>
-  let expanded = false;
-  function toggleProjects() {
-    const more = document.getElementById("more-projects");
-    const button = event.target;
-    if (expanded) {
-      more.style.display = "none";
-      button.innerText = "See more";
-    } else {
-      more.style.display = "block";
-      button.innerText = "See less";
+  // Automatically handle showing only first 4 projects
+  document.addEventListener('DOMContentLoaded', function() {
+    const projectsHeading = document.getElementById('projects');
+    if (!projectsHeading) return;
+    
+    // Find all projects after the heading
+    let currentElement = projectsHeading.nextElementSibling;
+    const projects = [];
+    
+    // Collect all project divs until we hit another h2 or the end
+    while (currentElement && currentElement.tagName !== 'H2') {
+      if (currentElement.classList && currentElement.classList.contains('project')) {
+        projects.push(currentElement);
+      }
+      currentElement = currentElement.nextElementSibling;
     }
-    expanded = !expanded;
-  }
+    
+    // If there are more than 4 projects, hide the extra ones and add toggle button
+    if (projects.length > 4) {
+      // Hide projects after the 4th one
+      projects.forEach((project, index) => {
+        if (index >= 4) {
+          project.style.display = 'none';
+          project.classList.add('hidden-project');
+        }
+      });
+      
+      // Create and insert the "See more" button after the 4th project
+      const button = document.createElement('button');
+      button.id = 'toggle-projects-btn';
+      button.textContent = 'See more';
+      button.style.margin = '20px 0';
+      button.onclick = function() {
+        const hiddenProjects = document.querySelectorAll('.hidden-project');
+        const isExpanded = hiddenProjects[0] && hiddenProjects[0].style.display !== 'none';
+        
+        hiddenProjects.forEach(project => {
+          project.style.display = isExpanded ? 'none' : 'flex';
+        });
+        
+        button.textContent = isExpanded ? 'See more' : 'See less';
+      };
+      
+      // Insert button after the 4th project
+      if (projects.length >= 4 && projects[3]) {
+        projects[3].insertAdjacentElement('afterend', button);
+      }
+    }
+  });
 </script>
 
 </body>
