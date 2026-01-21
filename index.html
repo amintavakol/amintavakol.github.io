@@ -189,7 +189,7 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project" data-project-index="4">
       <img src="projects/deeprxn/deeprxn.png" alt="deeprxn" />
       <div class="project-text">
         <div class="project-title">DeepRXN: A Platform of Deep Learning for Chemical Reactions</div>
@@ -205,7 +205,7 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project" data-project-index="5">
       <img src="projects/protein-dyn/protein_dynamics.jpg" alt="Protein Dynamics" />
       <div class="project-text">
         <div class="project-title">Capturing Protein Dynamics: Encoding Temporal and Spatial Dynamics from Molecular Dynamic Simulations</div>
@@ -221,7 +221,7 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project" data-project-index="6">
       <img src="projects/hydrogel/hydrogel.jpg" alt="hydrogel" />
       <div class="project-text">
         <div class="project-title">Unraveling the Properties of Super Hydrogels via Intelligent Reaction Predictions</div>
@@ -238,7 +238,7 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project" data-project-index="7">
       <img src="projects/toubillon/tourbillon.jpg" alt="Toubillon" />
       <div class="project-text">
         <div class="project-title">Circular Learning Provides Biological Plausibility</div>
@@ -308,54 +308,67 @@
 
 <script>
   // Automatically handle showing only first 4 projects
-  document.addEventListener('DOMContentLoaded', function() {
-    const projectsHeading = document.getElementById('projects');
-    if (!projectsHeading) return;
-    
-    // Find all projects after the heading
-    let currentElement = projectsHeading.nextElementSibling;
-    const projects = [];
-    
-    // Collect all project divs until we hit another h2 or the end
-    while (currentElement && currentElement.tagName !== 'H2') {
-      if (currentElement.classList && currentElement.classList.contains('project')) {
-        projects.push(currentElement);
-      }
-      currentElement = currentElement.nextElementSibling;
-    }
-    
-    // If there are more than 4 projects, hide the extra ones and add toggle button
-    if (projects.length > 4) {
-      // Hide projects after the 4th one
-      projects.forEach((project, index) => {
-        if (index >= 4) {
-          project.style.display = 'none';
-          project.classList.add('hidden-project');
-        }
-      });
+  (function() {
+    function initProjects() {
+      const projectsHeading = document.getElementById('projects');
+      if (!projectsHeading) return;
       
-      // Create and insert the "See more" button after the 4th project
-      const button = document.createElement('button');
-      button.id = 'toggle-projects-btn';
-      button.textContent = 'See more';
-      button.style.margin = '20px 0';
-      button.onclick = function() {
-        const hiddenProjects = document.querySelectorAll('.hidden-project');
-        const isExpanded = hiddenProjects[0] && hiddenProjects[0].style.display !== 'none';
-        
-        hiddenProjects.forEach(project => {
-          project.style.display = isExpanded ? 'none' : 'flex';
+      // Find all projects after the heading
+      let currentElement = projectsHeading.nextElementSibling;
+      const projects = [];
+      
+      // Collect all project divs until we hit another h2 or the end
+      while (currentElement && currentElement.tagName !== 'H2') {
+        if (currentElement.classList && currentElement.classList.contains('project')) {
+          projects.push(currentElement);
+        }
+        currentElement = currentElement.nextElementSibling;
+      }
+      
+      // If there are more than 4 projects, hide the extra ones and add toggle button
+      if (projects.length > 4) {
+        // Hide projects after the 4th one (index 4 and above = 5th project and beyond)
+        projects.forEach((project, index) => {
+          if (index >= 4) {
+            project.style.display = 'none';
+            project.classList.add('hidden-project');
+          }
         });
         
-        button.textContent = isExpanded ? 'See more' : 'See less';
-      };
-      
-      // Insert button after the 4th project
-      if (projects.length >= 4 && projects[3]) {
-        projects[3].insertAdjacentElement('afterend', button);
+        // Check if button already exists
+        let button = document.getElementById('toggle-projects-btn');
+        if (!button) {
+          // Create and insert the "See more" button after the 4th project
+          button = document.createElement('button');
+          button.id = 'toggle-projects-btn';
+          button.textContent = 'See more';
+          button.style.margin = '20px 0';
+          button.onclick = function() {
+            const hiddenProjects = document.querySelectorAll('.hidden-project');
+            const isExpanded = hiddenProjects[0] && hiddenProjects[0].style.display !== 'none';
+            
+            hiddenProjects.forEach(project => {
+              project.style.display = isExpanded ? 'none' : 'flex';
+            });
+            
+            button.textContent = isExpanded ? 'See more' : 'See less';
+          };
+          
+          // Insert button after the 4th project
+          if (projects.length >= 4 && projects[3]) {
+            projects[3].insertAdjacentElement('afterend', button);
+          }
+        }
       }
     }
-  });
+    
+    // Run immediately if DOM is ready, otherwise wait for it
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initProjects);
+    } else {
+      initProjects();
+    }
+  })();
 </script>
 
 </body>
