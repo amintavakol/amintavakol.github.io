@@ -312,12 +312,12 @@
 
 
     <hr />
-    <p style="text-align:center;">Last update: Jan 2026</p>
+    <p style="text-align:center;">Last update: March 2026</p>
   </div>
 </div>
 
 <script>
-  // Automatically handle showing only first 4 projects
+  // Automatically handle showing only first 3 projects
   (function() {
     function initProjects() {
       const projectsHeading = document.getElementById('projects');
@@ -335,11 +335,11 @@
         currentElement = currentElement.nextElementSibling;
       }
       
-      // If there are more than 4 projects, hide the extra ones and add toggle button
-      if (projects.length > 4) {
-        // Hide projects after the 4th one (index 4 and above = 5th project and beyond)
+      // If there are more than 3 projects, hide the extra ones and add toggle button
+      if (projects.length > 3) {
+        // Hide projects after the 3rd one (index 3 and above = 4th project and beyond)
         projects.forEach((project, index) => {
-          if (index >= 4) {
+          if (index >= 3) {
             project.style.display = 'none';
             project.classList.add('hidden-project');
           }
@@ -348,7 +348,7 @@
         // Check if button already exists
         let button = document.getElementById('toggle-projects-btn');
         if (!button) {
-          // Create and insert the "See more" button after the 4th project
+          // Create and insert the "See more" button after the 3rd project
           button = document.createElement('button');
           button.id = 'toggle-projects-btn';
           button.textContent = 'See more';
@@ -362,11 +362,18 @@
             });
             
             button.textContent = isExpanded ? 'See more' : 'See less';
+            
+            // Place button at end of displayed projects
+            if (isExpanded) {
+              projects[2].insertAdjacentElement('afterend', button);
+            } else {
+              projects[projects.length - 1].insertAdjacentElement('afterend', button);
+            }
           };
           
-          // Insert button after the 4th project
-          if (projects.length >= 4 && projects[3]) {
-            projects[3].insertAdjacentElement('afterend', button);
+          // Insert button after the 3rd project
+          if (projects.length >= 3 && projects[2]) {
+            projects[2].insertAdjacentElement('afterend', button);
           }
         }
       }
