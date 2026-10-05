@@ -340,12 +340,15 @@ button:focus-visible,
 
 /* Disabled state (optional) */
 button:disabled,
-.pdf-button[aria-disabled="true"] {
+.pdf-button[aria-disabled="true"],
+.pdf-button[aria-disabled="true"]:hover,
+.pdf-button[aria-disabled="true"]:active {
   background: #9bbbd0;
   color: #f2f6f9;
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
+  pointer-events: none;
 }
 
 /* If you want a lighter, secondary style: add class="btn--outline" */
